@@ -11,14 +11,14 @@ player.on(
       .getCurrentTime()
       .then(function (seconds) {
         console.log(`throttled current time:`, seconds);
-        localStorage.setItem('currentTime', seconds);
+        localStorage.setItem('videoplayer-current-time', seconds);
       })
       .catch(function (error) {});
   }, 1000)
 );
 
-console.log('saved time ->', localStorage.getItem(`currentTime`));
-const currentTime = localStorage.getItem(`currentTime`);
+console.log('saved time ->', localStorage.getItem('videoplayer-current-time'));
+const currentTime = localStorage.getItem('videoplayer-current-time');
 player
   .setCurrentTime(currentTime)
   .then(function (seconds) {
