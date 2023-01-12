@@ -10,7 +10,7 @@ player.on(
     player
       .getCurrentTime()
       .then(function (seconds) {
-        console.log(`throttle current time:`, seconds);
+        console.log(`throttled current time:`, seconds);
         localStorage.setItem('currentTime', seconds);
       })
       .catch(function (error) {});
